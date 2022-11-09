@@ -4,6 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
+
 - none
 
 pool:
@@ -13,9 +14,10 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   solution: '**/FolhaDePagamento.AzureTestProject.sln'
-  project:'**/FolhaDePagamento.AzureTestProject.csproj'
+  project: '**/FolhaDePagamento.AzureTestProject.sln'
 
 steps:
+
 - task: NuGetToolInstaller@1
   name: 'NugetToolInstaller'
   displayName: 'Nuget tool installer'
@@ -53,4 +55,6 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'FolhaDePagamento'
     publishLocation: 'Container'
+
+
 
