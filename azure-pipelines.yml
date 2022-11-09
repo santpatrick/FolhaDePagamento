@@ -20,7 +20,6 @@ steps:
   name: 'NugetToolInstaller'
   displayName: 'Nuget tool installer'
 
-
 - task: NuGetCommand@2
   name: 'NugetToolRestore'
   displayName: 'Nuget restore packages'
@@ -54,3 +53,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'FolhaDePagamento'
     publishLocation: 'Container'
+
